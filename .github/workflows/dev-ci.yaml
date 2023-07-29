@@ -19,7 +19,7 @@ build:
     - uses: actions/checkout@v3
     - id: aws-auth
       uses: "./.github/actions/aws-auth"
-      - name: Build and push dev image to ECR
+    - name: Build and push dev image to ECR
       env:
         REGISTRY: ${{ steps.aws-auth.outputs.registry }}
         REPOSITORY: devopsgirl2023/hello-ops-girl
